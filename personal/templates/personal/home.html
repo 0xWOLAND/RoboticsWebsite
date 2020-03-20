@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div style="
+background: url(static/css/animation.gif)  fixed;
+-webkit-background-size: cover;
+width: 100vw;
+height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;">
+	<div style="max-width: 100%;">
+		<h1 id="title">LASA ROBOTICS</h1>
+	</div>
+	<div>
+		<h3 id="subtitle">"Success is not a hocus pocus, it's a focus focus"</h3>
+	</div>
+</div>
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src ="{% static 'images/parts.jpg' %} " style="max-width:10%;">
+			</div>
+			<div class="col-sm-6 text-center">
+				<h2> All About LASA Robotics.</h2>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p class="lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+</div>
+
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-sx-12">
+				<h4>Built with Django</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-sx-12">
+				<img src="{% static 'images/django.jpg' %}" style="max-width: 10%">
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-sx-12">
+				<h4>And Python</h4>
+				<p>Proin aptent suscipit parturient porttitor suscipit consectetur donec nostra consequat vel vestibulum facilisis consequat ut elit sodales ridiculus a a suspendisse non scelerisque libero pellentesque.</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-sx-12">
+				<img src="{% static 'images/python.png' %}" style="max-width: 10%;">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div style="
+background: url(static/images/nick.jpg) no-repeat center center fixed;
+display: table;
+height: 100%;
+position: relative;
+width: 100%;
+background-size: cover;
+">
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h4> Here's the cool thing about LASA Robotics...</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="col-sm-6">
+				<img src ="{% static 'images/krishanu.jpg' %}" style="max-width: 100%;">
+			</div>
+	</div>
+</div>
+<footer class="container-fluid text-center">
+	<div class="row">
+		<div class= "col-sm-4">
+			<h3>Contact Us</h3>
+			<br>
+			<h4>Our address and conact info here.</h4>
+		</div>
+		<div class= "col-sm-4">
+			<h3>Connect</h3>
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<i href="#" class="fa fa-instagram"></i>
+		</div>
+		<div class= "col-sm-4">
+			<img src="{% static 'images/logo.png' %}" class="icon">
+		</div>
+	</div>
+
+
+</footer>
+
+
+
+{% endblock content %}
