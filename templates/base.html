@@ -12,14 +12,48 @@
   <h1 class="logo">Logo</h1>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Team</a></li>
-      <li><a href="#">Members</a></li>
-      <li><a href="#">SMART Camps</a></li>
-      <li><a href="#">Sponsors</a></li>
-      <li><a href="#">Donations</a></li>
+    <ul class="navbar-items">
+        <div>
+          <li><a href="#" >Home</a></li>
+        </div>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">About Us</button>
+            <div class="dropdown-content">
+              <a href="#">Team History</a>
+              <a href="#">Coaches and Mentors</a>
+              <a href="#">Outreach</a>
+              <a href="#">Association</a>
+              <a href="#">The Shop</a>
+              <a href="#">FIRST</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+        </li>
+        <div>
+          <li><a href="#" >Team</a></li>
+        </div>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Members</button>
+            <div class="dropdown-content">
+              <a href="#">Students</a>
+              <a href="#">Log Hours</a>
+              <a href="#">Parents</a>
+              <a href="#">Calendar</a>
+              <a href="#">Team Gear</a>
+            </div>
+          </div>
+        </li>       
+        <div>
+          <li><a href="#">SMART Camps</a></li>
+        </div>
+        <div>
+          <li><a href="#">Donations</a></li>
+        </div>
+        <div>
+          <li><a href="#">Shop</a></li>
+        </div>
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
@@ -34,3 +68,27 @@
 
 </footer>
 </html>
+
+{% comment %}
+
+Navbar Tree :
+-Home
+-About Us
+  - Team History
+  - Coaches and Mentors
+  - Outreach
+  - Association
+  - The Shop
+  - FIRST
+  - Contact Us
+-Team
+-Members 
+  - Students
+  - Log Hours
+  - Parents
+  - Calendar
+  - Team Gear
+- SMART Camps
+- Donations
+- Shop
+ {% endcomment %}

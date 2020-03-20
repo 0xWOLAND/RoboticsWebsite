@@ -1,3 +1,8 @@
+html {
+    margin: 0;
+    width: 100%;
+}
+
 h3 {
     font-family: 'Bai Jamjuree';
     font-weight: lighter;
@@ -31,52 +36,15 @@ p {
 }
 
 
-/* Navbar Editing */
-
-
-/* 
-.navigation {
-    background-color: #ffffff;
-    height: 45px;
-    display: flex;
-    justify-content: flex-end;
-    overflow-wrap: normal;
-    align-items: baseline;
-    align-content: space-between;
-}
-
-.item {
-    margin: 5px;
-}
-
-button {
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    background-color: #ffffff;
-    transition: background-color 0.5s ease-in-out;
-    outline: 0;
-}
-
-button:hover {
-    transition-timing-function: ease-in-out;
-    transition: 0.2s;
-    background-color: #f2f2f2;
-}
- */
-
-
 /* Scroll Bar */
 
-::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 :root {
-    --background: #f2f2f2;
+    --background: #ffffff;
 }
 
 *,
@@ -186,14 +154,20 @@ nav li {
 nav a {
     color: #2b2b2b;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 12px;
     text-transform: uppercase;
     opacity: 0;
-    transition: opacity 150ms ease-in-out;
+    transform: transition 150ms ease-in-out;
+    position: relative;
+    top: 50%;
+    /* padding: 10px; */
+    transition: 0.3s ease-in-out;
+    padding: 10px;
 }
 
 nav a:hover {
     color: rgb(97, 53, 145);
+    background-color: #f2f2f2;
 }
 
 .nav-toggle:checked~nav {
@@ -202,16 +176,67 @@ nav a:hover {
 
 .nav-toggle:checked~nav a {
     opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
+    /* transition: opacity 250ms ease-in-out; */
+    display: block;
 }
 
-@media screen and (min-width: 1133px) {
+.dropbtn {
+    background: none;
+    color: #2b2b2b;
+    font-size: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Bai Jamjuree';
+    text-transform: uppercase;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    /* display: none; */
+    opacity: 0;
+    display: none;
+    position: absolute;
+    transition: opacity ease-in-out 250ms;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+} */
+
+@media screen and (min-width: 874px) {
     .nav-toggle-label {
         display: none;
     }
     header {
         display: grid;
-        grid-template-columns: 100px auto minmax(600px, 3fr) 100px;
+        grid-template-columns: 50px auto minmax(600px, 3fr) 50px;
     }
     .logo {
         grid-column: 2 / 3;
@@ -242,19 +267,22 @@ nav a:hover {
         opacity: 1;
         position: relative;
     }
-    nav a::before {
-        content: '';
-        display: block;
-        height: 5px;
-        background: rgb(97, 53, 145);
-        position: absolute;
-        top: -.75em;
-        left: 0;
-        right: 0;
-        transform: scale(0, 1);
-        transition: transform ease-in-out 250ms;
-    }
     nav a:hover::before {
         transform: scale(1, 1);
+    }
+}
+
+@media screen and (max-width: 874px) {
+    .dropbtn {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    #title {
+        font-size: 20vw;
+    }
+    #subtitle {
+        font-size: 10vw;
     }
 }
