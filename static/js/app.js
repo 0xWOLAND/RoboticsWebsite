@@ -1,23 +1,11 @@
-console.clear();
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    //Toggle Nav
+function isScrolledIntoView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
 
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-    });
-    // Fixed an issue here from foreach to forEach.
-    navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = ''
-        } else {
-            //Here there was a small mistake of using normal quotes '' and not back ticks ``.
-            //Thats it!
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index /7 + 1.5}s`;
-        }
-        console.log(index / 7);
-    });
+    // Only completely visible elements return true:
+    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    // Partially visible elements return true:
+    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
 }
-navSlide();

@@ -1,6 +1,14 @@
-html {
+@color =html {
     margin: 0;
     width: 100%;
+}
+
+h2 {
+    font-family: 'Bai Jamjuree';
+    font-size: 45px;
+    font-weight: 400;
+    margin: 30px;
+    ;
 }
 
 h3 {
@@ -17,22 +25,26 @@ p {
     font-weight: 300;
     line-height: 1.9em;
     letter-spacing: 0.2px;
+    margin: 0;
 }
 
 
 /* Altering Title Positioning */
 
 #title {
-    font-size: 6em;
+    font-size: 85px;
     margin: 0 0 0 0;
     width: 100%;
     font-family: 'Bai Jamjuree';
     color: #ffffff;
+    padding: 10px;
+    top: 50px;
 }
 
 #subtitle {
+    font-size: 35px;
     margin: 0 0 0 0;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 
@@ -45,6 +57,7 @@ p {
 
 :root {
     --background: #ffffff;
+    --purple-color: #613591;
 }
 
 *,
@@ -68,6 +81,108 @@ body {
     background-size: cover;
     display: grid;
     place-items: center;
+}
+
+
+/* "All About LASA Robotics" Block */
+
+.all_about_LR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 25px 100px 25px;
+    justify-content: flex-start;
+    background-color: #f2f2f2;
+}
+
+#all-about-title {
+    opacity: 0;
+}
+
+#all-about-title-read {
+    opacity: 1;
+    transition: 2s ease-in;
+}
+
+#all-about-description {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #2b2b2b;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9em;
+    letter-spacing: 0.2px;
+    width: 50%;
+    text-align: center;
+    opacity: 0;
+}
+
+#all-about-description-read {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #2b2b2b;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9em;
+    letter-spacing: 0.2px;
+    width: 50%;
+    text-align: center;
+    opacity: 1;
+    transition: 1s ease-in;
+}
+
+#join_us {
+    width: 150px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    font-family: "Bai Jamjuree";
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: 0;
+    border-radius: 16px;
+    position: relative;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    /* transition: 2s ease-in; */
+}
+
+#join_us-read {
+    width: 150px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    font-family: "Bai Jamjuree";
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 16px;
+    position: relative;
+    top: 80%;
+    opacity: 1;
+    outline: 0;
+    transition: 1s ease-in-out;
+}
+
+#join_us-read:hover {
+    background-color: var(--purple-color);
+}
+
+@media screen and (max-width: 768px) {
+    #all-about-description {
+        width: 90%;
+    }
 }
 
 
@@ -130,7 +245,7 @@ header {
 
 nav {
     position: absolute;
-    text-align: left;
+    text-align: center;
     top: 100%;
     left: 0;
     background: var(--background);
@@ -160,14 +275,12 @@ nav a {
     transform: transition 150ms ease-in-out;
     position: relative;
     top: 50%;
-    /* padding: 10px; */
     transition: 0.3s ease-in-out;
-    padding: 10px;
 }
 
 nav a:hover {
-    color: rgb(97, 53, 145);
-    background-color: #f2f2f2;
+    color: var(--purple-color);
+    /* background-color: #f2f2f2; */
 }
 
 .nav-toggle:checked~nav {
@@ -280,9 +393,9 @@ nav a:hover {
 
 @media screen and (max-width: 481px) {
     #title {
-        font-size: 20vw;
+        font-size: 15vw;
     }
     #subtitle {
-        font-size: 10vw;
+        font-size: 7vw;
     }
 }

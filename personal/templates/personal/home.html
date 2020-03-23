@@ -6,7 +6,7 @@
 background: url(static/css/animation.gif)  fixed;
 -webkit-background-size: cover;
 width: 100%;
-height: 600px;
+height: 800px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -15,20 +15,22 @@ flex-direction: column;">
 		<h1 id="title">LASA ROBOTICS</h1>
 	</div>
 	<div>
-		<h3 id="subtitle">"Success is not a hocus pocus, it's a focus focus"</h3>
+		<h3 id="subtitle">"Sunt amet laboris anim culpa ipsum ipsum nostrud magna fugiat ad magna et."</h3>
 	</div>
 </div>
 <div class="padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<img src ="{% static 'images/parts.jpg' %} " style="max-width:10%;">
+				{% comment %} <img src ="{% static 'images/parts.jpg' %} " style="max-width:10%;"> {% endcomment %}
 			</div>
-			<div class="col-sm-6 text-center">
-				<h2> All About LASA Robotics.</h2>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p class="lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+			<div>	
+				<div class="all_about_LR">
+					<h2 id="all-about-title"> LASA Robotics Team.</h2>
+					<p id="all-about-description">Aute et minim commodo mollit cupidatat exercitation. Minim consectetur elit cupidatat tempor proident laborum est et irure esse duis ex exercitation laborum. Ullamco magna reprehenderit tempor sunt consectetur dolore laboris laboris consequat elit ea. Qui cupidatat nulla ut deserunt irure dolore dolor exercitation dolor aliqua in pariatur occaecat dolor. Voluptate sit proident sit voluptate velit ut eu enim duis et deserunt officia. Est in ad ad occaecat.</p>
+					<button href="#" id="join_us">Join Us</button>
+				</div>
+			</div>
 	</div>
 </div>
 
@@ -62,7 +64,7 @@ height: 100%;
 position: relative;
 width: 100%;
 background-size: cover;
-">
+" id="nick">
 <br>
 <br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -103,6 +105,6 @@ background-size: cover;
 
 </footer>
 
-
+<script src="{% static 'js/inView.js' %}"></script>
 
 {% endblock content %}

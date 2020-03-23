@@ -1,0 +1,2 @@
+# RoboticsWebsite
+Me attempting to remake the LASA Robotics Website (link https://lasarobotics.org/) as a freshman at the Liberal Arts and Science Academy. Note that I have the same amount of experience in HTML, CSS, and Javascript as a 🍌 banana. But, I shall learn and try to make my first website 🚀. It currently runs on a Python framework called Django, which I plan to use to build some sort of a chat so that the LASA Robotics Club can become independent of Slack, but I'm a freshman so I don't know how that will pan out.
